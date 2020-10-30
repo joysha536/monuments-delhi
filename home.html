@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monuments of Delhi |Home</title>
+    <link rel = "shortcut icon" href ="/my_icon.png" type ="image/png" />
+    <link rel="stylesheet" href="form.css">
+    <style>
+        video {
+            position: fixed;
+            object-fit: fill;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        div{
+            position: fixed;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 100%;
+            text-align: center;
+        }
+        .corona{
+            top: 0; 
+            background-color: rgba(158, 33, 33, 0.767);
+        }
+        .menu{
+            top: 42%;
+            bottom: 45%;
+        }
+        table {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            vertical-align: middle;
+            font-size: x-large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        a {color: #f1f1f1}
+        a:hover{background-color: rgba(158, 33, 33, 0.6);}
+        .footer{bottom: 0;}
+        button{
+            background-color: rgba(158, 33, 33, 0.6);
+            width: 100%;
+            color: #f1f1f1;
+            font-size: medium;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="video">
+        <source src="delhi.mp4" type="video/mp4">  
+    </video>
+     
+    <div class="corona">
+        CORONA ALERT: TRAVEL WITH CARE!!!
+    </div>
+
+    <div class="menu">
+        <table>
+            <tr>
+                <td><a href="qutub.html">Qutub Minar</a></td>
+                <td>|</td>
+                <td><a href="indiagate.html">India Gate</a></td>
+                <td>|</td>
+                <td><a href="safdarjung.html">Safdarjung Tomb</a></td>
+                <td>|</td>
+                <td><a href="jama.html">Jama Masjid</a></td>
+                <td>|</td>
+                <td><a href="humayuntomb.html">Humayun's Tomb</a></td>
+                <td>|</td>
+                <td><a href="redfort.html">Red Fort</a></td>
+                <td>|</td>
+                <td><a href="jantarmantar.html">Jantar Mantar</a></td>
+            </tr>
+        </table>
+    </div> 
+
+    <div class="footer">
+        <p>
+            <button class="open-button" onclick="openForm()">Subscribe to our Newsletter!</button>
+            <br>
+            <a href="https://www.instagram.com/joyshagarwal/">
+                <img src="insta.png" height="30">
+            </a>
+            <a href="mailto:joysha.agarwal@gmail.com">
+                <img src="mail.png" height="35">
+            </a>
+            <a href="https://twitter.com/joyshagarwal">
+                <img src="twitter.png" height="28">
+            </a>
+            <br>
+            Website compiled by: Joysha Agarwal
+            <br>
+            Video credits: The Journal Productions.
+        </p>
+    </div> 
+
+    <div class="form-popup" id="myForm">
+        <form class="form-container" onsubmit="openText()">
+          <h1>Newsletter Subscription</h1>
+      
+          <label for="name"><b>Name:</b><span class="required">*</span></label>
+          <input type="text" placeholder="Enter Name" name="name" required>
+          <br>
+          <label for="email"><b>Email:</b><span class="required">*</span></label>
+          <input type="email" placeholder="Enter Email" name="email" required>
+
+          <p><input type="checkbox" name="agree" id="agree" checked required>
+          I agree to receive news and updates.</p>
+      
+          <button type="submit" class="btn">Subscribe</button>
+          <button type="button" class="btn" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <div class="text-popup" id="myText">
+        <p>Your contact has been successfully added to the mailing list.</p>
+        <button type="button" class="btn_ok" onclick="closeText()">OK</button>
+    </div>
+     
+    <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+
+        function openText() {
+            document.getElementById("myText").style.display = "block";
+        }
+
+        function closeText() {
+          document.getElementById("myText").style.display = "none";
+        }
+        </script>
+</body>
+</html>
